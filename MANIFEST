@@ -25,6 +25,7 @@ lib/PMLTQ/Command/webtreebank.pm
 lib/PMLTQ/Command/webverify.pm
 lib/PMLTQ/Commands.pm
 script/pmltq
+share/sql/init.sql
 t/00-compile.t
 xt/author/convert_command.t
 xt/author/init_command.t
