@@ -1,5 +1,6 @@
 package PMLTQ::Command::webload;
-
+our $AUTHORITY = 'cpan:MATY';
+$PMLTQ::Command::webload::VERSION = '0.0.1';
 # ABSTRACT: Register treebank in web interface
 
 use PMLTQ::Base 'PMLTQ::Command';
