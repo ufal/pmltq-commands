@@ -5,6 +5,8 @@ Revision history for {{$dist->name}}
 
  [BUG FIXES]
 - add missing prereqs
+- fix wrong path to share directory
+
  [DOCUMENTATION]
 
  [ENHANCEMENTS]
