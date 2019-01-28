@@ -4,12 +4,17 @@ Revision history for {{$dist->name}}
  [API CHANGES]
 
  [BUG FIXES]
-- add missing prereqs
-- fix wrong path to share directory
 
  [DOCUMENTATION]
 
  [ENHANCEMENTS]
+
+2.0.3
+ - Released: 2019-01-28 10:59:13 UTC
+
+ [BUG FIXES]
+ - add missing prereqs
+ - fix wrong path to share directory
 
 2.0.2
  - Released: 2019-01-24 09:29:38 UTC
