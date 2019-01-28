@@ -32,6 +32,7 @@ has term_encoding => sub {
   Term::Encoding::get_encoding();
 };
 
+
 sub run {
   die 'Override by parent class';
 }

@@ -3,20 +3,9 @@ package PMLTQ::Command::initdb;
 # ABSTRACT: Initialize empty database
 
 use PMLTQ::Base 'PMLTQ::Command';
+use PMLTQ::Commands;
 
 has usage => sub { shift->extract_usage };
-
-
-use File::Basename 'dirname';
-use File::Spec ();
-use File::ShareDir 'dist_dir';
-my $local_shared_dir = File::Spec->catdir(dirname(__FILE__), File::Spec->updir, File::Spec->updir, File::Spec->updir, 'share');
-my $shared_dir = eval { dist_dir(__PACKAGE__) };
-# Assume installation
-if (-d $local_shared_dir or !$shared_dir) {
-  $shared_dir = $local_shared_dir;
-}
-sub shared_dir { $shared_dir }
 
 
 sub run {
@@ -29,7 +18,7 @@ sub run {
   $dbh->disconnect;
 
   $dbh = $self->db;
-  $self->run_sql_from_file( 'init.sql', File::Spec->catfile( shared_dir(), 'sql' ), $dbh );
+  $self->run_sql_from_file( 'init.sql', File::Spec->catfile( PMLTQ::Commands::shared_dir(), 'sql' ), $dbh );
   $dbh->disconnect;
 }
 
