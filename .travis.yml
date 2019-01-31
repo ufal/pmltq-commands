@@ -22,7 +22,7 @@ matrix:
     - perl: 5.18
       env:
         - COVERAGE=1
-        - 'HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,local,^t/"'
+        - 'HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,local,^t/,^xt/"'
 
 
 branches:
